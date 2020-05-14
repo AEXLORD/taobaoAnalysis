@@ -19,10 +19,14 @@ def fileProcess(name):
         with open('Input\\'+name+'.txt', 'r', encoding='utf-8') as f:
             #天猫的规则
             # commentList = re.findall(r'(?<="rateContent":").*?(?=")', f.read())
+            # f.seek(0, 0)
+            # timeList = re.findall(r'(?<="rateDate":").*?(?=")', f.read())
+
             # 淘宝的规则
             commentList = re.findall(r'(?<="content":").*?(?=")', f.read())
             f.seek(0,0)
             timeList = re.findall(r'(?<="date":").*?(?=")', f.read())
+            
             List = []
             List.append(commentList)
             List.append(timeList)
