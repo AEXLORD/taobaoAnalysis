@@ -11,11 +11,15 @@ import xlrd
 import matplotlib
 import matplotlib.pyplot as plt
 import collections
+import configparser
+
+cp = configparser.RawConfigParser()
+cp.read('Infor.conf')
 
 matplotlib.rcParams['font.sans-serif']=['SimHei']
 matplotlib.rcParams['axes.unicode_minus']=False
 
-data = xlrd.open_workbook('guaiweihudou.xls')
+data = xlrd.open_workbook(cp.get('taobao','name'))
 table = data.sheets()[0]
 dateList = table.col_values(0,1,table.nrows)
 syList = table.col_values(2,1,table.nrows)
