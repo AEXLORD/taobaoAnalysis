@@ -19,7 +19,7 @@ cp.read('Infor.conf')
 matplotlib.rcParams['font.sans-serif']=['SimHei']
 matplotlib.rcParams['axes.unicode_minus']=False
 
-data = xlrd.open_workbook(cp.get('taobao','name'))
+data = xlrd.open_workbook(cp.get('taobao','name')+'.xls')
 table = data.sheets()[0]
 dateList = table.col_values(0,1,table.nrows)
 syList = table.col_values(2,1,table.nrows)
