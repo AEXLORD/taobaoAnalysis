@@ -7,9 +7,9 @@
 @time: 5/9/2020 19:10
 @desc:半自动淘宝商品评论抓取工具
 '''
-from taobaoAnalysis import taobao
-from  taobaoAnalysis import filePreRegular
-from  taobaoAnalysis import dataAnalysis as DA
+import taobao
+import filePreRegular
+import dataAnalysis as DA
 import configparser
 import time
 import random
